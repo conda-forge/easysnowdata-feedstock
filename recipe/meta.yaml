@@ -1,5 +1,5 @@
 {% set name = "easysnowdata" %}
-{% set version = "0.0.15" %}
+{% set version = "0.0.16" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/easysnowdata-{{ version }}.tar.gz
-  sha256: 389af825c999150381ae27bf5345ac241ac9e4c0e342a7bc35aa458dae2005f9
+  sha256: 4b146ce15c8cd1af5fb42576a697e3ea802c7cc4a9aa718c9a3f6ddf4e725b1d
 
 build:
   noarch: python
