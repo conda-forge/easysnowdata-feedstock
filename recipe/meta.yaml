@@ -61,8 +61,15 @@ requirements:
 test:
   imports:
     - easysnowdata
-  commands:
-    - pip check
+  # `pip check` is omitted, and it is the dependency's metadata at fault, not
+  # this one's. conda-forge's `planet` installs with a dist-info version of
+  # 0.0.0: planet 3.6.0 declares `dynamic = ["version"]` with setuptools_scm,
+  # and planet-feedstock's host section has setuptools and pip but no
+  # setuptools-scm, so the version never resolves. easysnowdata requires
+  # `planet>=3.6`, so pip check reports
+  #   easysnowdata 0.2.0 has requirement planet>=3.6, but you have planet 0.0.0
+  # on a package that is installed correctly. Restore this line once
+  # planet-feedstock adds setuptools-scm to host.
   requires:
     - python {{ python_min }}
     - pip
