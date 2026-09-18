@@ -7,7 +7,11 @@ Home: https://egagli.github.io/easysnowdata/
 
 Package license: MIT
 
-Summary: package to easily get data relevant to snow
+Summary: A Python package to easily retrieve data relevant to snow science
+
+Development: https://github.com/egagli/easysnowdata
+
+Documentation: https://egagli.github.io/easysnowdata
 
 Current build status
 ====================
