@@ -1,5 +1,5 @@
 {% set name = "easysnowdata" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.1" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/easysnowdata-{{ version }}.tar.gz
-  sha256: 1b01cdb16f32a56f576a4b102cde099359db1df0e2222c32cda504ee89a83ea6
+  sha256: 45ef8d304e7ad1f379293bd6178fb4fe62c96301fe9482c1cc8034e98e0c1a00
 
 build:
   noarch: python
@@ -25,6 +25,8 @@ requirements:
     - python >={{ python_min }}
     - numpy
     - matplotlib-base
+    - matplotlib-scalebar
+    - contextily
     - pandas
     - geopandas >=1.1
     - pyogrio >=0.12
@@ -48,7 +50,6 @@ requirements:
     - pyyaml
     - requests
     - lxml
-    - scikit-image
     - tqdm
     - dask-core
     - zarr >=3.1
@@ -67,7 +68,7 @@ test:
   # and planet-feedstock's host section has setuptools and pip but no
   # setuptools-scm, so the version never resolves. easysnowdata requires
   # `planet>=3.6`, so pip check reports
-  #   easysnowdata 0.2.0 has requirement planet>=3.6, but you have planet 0.0.0
+  #   easysnowdata 0.3.1 has requirement planet>=3.6, but you have planet 0.0.0
   # on a package that is installed correctly. Restore this line once
   # planet-feedstock adds setuptools-scm to host.
   requires:
