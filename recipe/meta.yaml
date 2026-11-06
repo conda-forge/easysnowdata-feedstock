@@ -1,5 +1,5 @@
 {% set name = "easysnowdata" %}
-{% set version = "0.3.6" %}
+{% set version = "0.3.7" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/easysnowdata-{{ version }}.tar.gz
-  sha256: 07460a997317e1d0ad74c52b615aefa159d28bb0faa3bf3af4010669ceeca514
+  sha256: 325260d197b42370a4bdaab4643355196bf45f46008b73b8aabe95ea787c97b2
 
 build:
   noarch: python
